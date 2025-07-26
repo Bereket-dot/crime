@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Crime Data Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uk-crime.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🔍</div>
+                <div class="logo-text">UK Crime Data</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="uk-crime.html" class="active">UK Crime</a></li>
+                    <li><a href="us-crime.html">US Crime</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="prevention.html">Prevention</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>UK Crime Data Explorer</h1>
+            <p>Street-level crime data from UK Police API</p>
+        </section>
+
+        <section class="search-section">
+            <div class="card">
+                <h2 class="card-title">📍 Search Crime Data</h2>
+                <div class="form-group">
+                    <label for="latitude">Latitude</label>
+                    <input type="text" id="latitude" class="form-control" placeholder="e.g. 51.5074">
+                </div>
+                <div class="form-group">
+                    <label for="longitude">Longitude</label>
+                    <input type="text" id="longitude" class="form-control" placeholder="e.g. -0.1278">
+                </div>
+                <button id="fetchCrimes" class="btn btn-block">Retrieve Crime Data</button>
+            </div>
+            
+            <div class="map-container">
+                <div id="crimeMap"></div>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <h2 class="card-title">🔍 Crime Results</h2>
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Processing crime data from UK Police API</p>
+            </div>
+            <div class="results-grid" id="crimeResults"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Data sourced from UK Police API | © 2025 Global Crime Data Hub</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/uk-crime.js"></script>
+</body>
+</html>

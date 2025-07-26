@@ -1,0 +1,77 @@
+.principles-section {
+    margin: 3rem 0;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.principle-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid var(--card-border);
+    transition: all 0.3s ease;
+}
+
+.principle-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 20, 40, 0.5);
+}
+
+.principle-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.principle-card h3 {
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.case-studies {
+    margin: 4rem 0;
+}
+
+.case-study {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 30px;
+    border: 1px solid var(--card-border);
+}
+
+.case-study h3 {
+    color: var(--accent-light);
+    margin-bottom: 15px;
+}
+
+.before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.before-after img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.before-after h4 {
+    color: var(--accent);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .before-after {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Crime Statistics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/us-crime.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🔍</div>
+                <div class="logo-text">US Crime Statistics</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="uk-crime.html">UK Crime</a></li>
+                    <li><a href="us-crime.html" class="active">US Crime</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="prevention.html">Prevention</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>US Crime Statistics Analyzer</h1>
+            <p>Comprehensive analysis of crime trends across US states and cities</p>
+        </section>
+
+        <section class="controls-section">
+            <div class="card">
+                <h2 class="card-title">📊 Select Crime Data Parameters</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="state">Select State</label>
+                        <select id="state" class="form-control">
+                            <option value="CA">California</option>
+                            <option value="NY">New York</option>
+                            <option value="TX">Texas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="AZ">Arizona</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Select Year</label>
+                        <select id="year" class="form-control">
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="crimeType">Crime Type</label>
+                        <select id="crimeType" class="form-control">
+                            <option value="all">All Crimes</option>
+                            <option value="assault">Assault</option>
+                            <option value="theft">Theft</option>
+                            <option value="burglary">Burglary</option>
+                            <option value="robbery">Robbery</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="analyzeCrime" class="btn btn-block">Analyze Crime Trends</button>
+            </div>
+        </section>
+
+        <section class="visualization-section">
+            <div class="visualization-container">
+                <div class="chart-container">
+                    <canvas id="crimeTrendsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="crimeDistributionChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="chart-container full-width">
+                <canvas id="crimeHeatmap"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Data sourced from U.S. Data.gov and FBI Uniform Crime Reports | © 2025 Global Crime Data Hub</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-heatmap"></script>
+    <script src="js/us-crime.js"></script>
+</body>
+</html>

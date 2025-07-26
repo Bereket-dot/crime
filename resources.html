@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Crime Resources</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resources.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🔍</div>
+                <div class="logo-text">Global Crime Resources</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="uk-crime.html">UK Crime</a></li>
+                    <li><a href="us-crime.html">US Crime</a></li>
+                    <li><a href="resources.html" class="active">Resources</a></li>
+                    <li><a href="prevention.html">Prevention</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Global Crime Data Resources</h1>
+            <p>Connect with authoritative crime data sources and analysis platforms worldwide</p>
+        </section>
+
+        <section class="filter-section">
+            <div class="card">
+                <h2 class="card-title">🔍 Filter Resources</h2>
+                <div class="filter-controls">
+                    <input type="text" id="resourceSearch" class="form-control" placeholder="Search resources...">
+                    <select id="resourceCategory" class="form-control">
+                        <option value="all">All Categories</option>
+                        <option value="api">Data APIs</option>
+                        <option value="research">Research Papers</option>
+                        <option value="tools">Analysis Tools</option>
+                        <option value="org">Organizations</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="resources-section">
+            <div class="resources-grid" id="resourcesContainer">
+                <!-- Resources will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Global Crime Data Hub | Integrating International Crime Data Sources</p>
+        </div>
+    </footer>
+
+    <script src="js/resources.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+:root {
+    --primary: #0c1d2c;
+    --secondary: #1a3a53;
+    --accent: #4a9fff;
+    --accent-light: #6df7e1;
+    --text: #e0f0ff;
+    --text-secondary: #b3deff;
+    --card-bg: rgba(16, 42, 66, 0.7);
+    --card-border: rgba(74, 159, 255, 0.3);
+    --shadow: 0 8px 32px rgba(0, 20, 40, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: rgba(10, 25, 41, 0.95);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 15px rgba(0, 20, 40, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background: rgba(74, 159, 255, 0.2);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(74, 159, 255, 0.4);
+}
+
+.hero {
+    padding: 5rem 0 3rem;
+    text-align: center;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(74, 159, 255, 0.05)"/></svg>') bottom/cover no-repeat;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #ffffff 0%, var(--accent-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: var(--text-secondary);
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: var(--shadow);
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(74, 159, 255, 0.3);
+}
+
+.card-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-title i {
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--accent) 0%, #2a76c7 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #5aa9ff 0%, #3a86d7 100%);
+    box-shadow: 0 5px 15px rgba(74, 159, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-block {
+    width: 100%;
+    display: block;
+}
+
+footer {
+    background: rgba(8, 20, 34, 0.95);
+    padding: 3rem 0 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+footer p {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 992px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    
+    .visualization-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 10px;
+        margin-top: 15px;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+    }
+}

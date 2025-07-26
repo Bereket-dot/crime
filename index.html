@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Crime Data Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🔍</div>
+                <div class="logo-text">Global Crime Data Hub</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="uk-crime.html">UK Crime</a></li>
+                    <li><a href="us-crime.html">US Crime</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="prevention.html">Prevention</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Global Crime Intelligence Platform</h1>
+            <p>Comprehensive crime data visualization and analysis from multiple international sources</p>
+            <img src="https://images.unsplash.com/photo-1607860109915-8d4b4da74dce" alt="Crime data visualization" class="hero-img">
+        </section>
+
+        <section class="dashboard">
+            <div class="card">
+                <h2 class="card-title">📍 UK Crime Data</h2>
+                <p>Explore street-level crime data from UK Police API</p>
+                <a href="uk-crime.html" class="btn">Explore UK Data</a>
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title">📊 US Crime Statistics</h2>
+                <p>Analyze crime trends across US states and cities</p>
+                <a href="us-crime.html" class="btn">View US Statistics</a>
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title">🌍 Global Resources</h2>
+                <p>Access international crime databases and research</p>
+                <a href="resources.html" class="btn">Access Resources</a>
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title">🛡️ Prevention Strategies</h2>
+                <p>Learn CPTED principles for safer communities</p>
+                <a href="prevention.html" class="btn">Learn Prevention</a>
+            </div>
+        </section>
+
+        <section class="visualizations">
+            <h2>Crime Trend Visualizations</h2>
+            <div class="chart-container">
+                <canvas id="globalTrendsChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Integrating International Crime Data Sources</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
